@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Permanent+Marker&display=swap");
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.game {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #34495e;
+  color: #fff;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.game > div {
+  border: 6px solid #2c3e50;
+  font-family: "Permanent Marker", cursive;
+  font-weight: bold;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: 5px solid #2c3e50;
+  background-color: #34495e;
+  font-family: "Amatic SC", cursive;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.game > div.winner {
+  background-color: #ffff00;
+  color: #0000ff;
+}
+
+@media (min-width: 600px) {
+  .game {
+    width: 600px;
+    height: 600px;
+    border-radius: 10px;
+    border: 6px solid #2c3e50;
+  }
+
+  .game > div {
+    border-radius: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .btn {
+    cursor: pointer;
+  }
+}
